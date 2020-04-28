@@ -20,9 +20,8 @@ logging.level.com.jks.firstweb=DEBUG
 ```
 
 ## Commands
-- 
 -  `mvn install` : frontend, backend install
 - Use `mvn test` : 테스트 건너 뛰기로 함
-- Use `mvn spring-boot:run` to start the back-end
+- Use `mvn spring-boot:run` 백엔드 시작
 - Use `npm run serve` inside the `front-end` directory to start the front-end
 - Use `java -jar target/app-0.0.1-SNAPSHOT.jar` to start the bundled application
