@@ -1,8 +1,9 @@
+import axios from 'axios'
+
 export default{
-  register (detail) {
-    return new Promise((resolve, reject) => {
-      detail.emailAddress === 'kyungsik@local'
-        ? resolve({result: 'success'}) : reject(new Error('사용자가 이미 존재합니다'))
-    })
+  register(details){
+    return new Promise((resolve,reject)=>{axios.post('/registrations',details).then({data}=>resolve(data)).catch(error){
+      reject(error)
+    }})
   }
 }
