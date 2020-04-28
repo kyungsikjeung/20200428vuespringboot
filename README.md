@@ -8,16 +8,34 @@ Create `src/main/resources/application-dev.properties` with the following settin
 
 ```properties
 server.port = 8088
-
 logging.level.org.springframework.jdbc.core.JdbcTemplate=DEBUG
 logging.level.org.springframework.jdbc.core.StatementCreatorUtils=TRACE
-
 spring.datasource.url=jdbc:mysql://localhost:7830/test?useUnicode=yes&characterEncoding=UTF-8
 spring.datasource.username=root
 spring.datasource.password=7830
-
 logging.level.com.jks.firstweb=DEBUG
 ```
+## Mysql 설치
+설치 가이드 링크 
+```properties
+https://blog.naver.com/tipsware/221303627201
+
+TEST DB SETTING
+PORT:7830
+ID:root
+PW:7830
+스키마명:test
+
+샘플 테이블
+CREATE TABLE `messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `text` varchar(128) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `created_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+
+```
+
 
 ## Commands
 -  `mvn install` : frontend, backend install
